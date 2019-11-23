@@ -1,2 +1,2 @@
 # HomeManagementPlatform
-Java web application to manage home automation
+microservices application to manage home automation
