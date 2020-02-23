@@ -1,0 +1,16 @@
+{
+  "name": "hip-db",
+  "version": "1.0.0",
+  "description": "Mongo DB REST API for Home Integration Platform",
+  "main": "hip-db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-status": "^1.4.2",
+    "mongodb": "^3.5.3"
+  }
+}
