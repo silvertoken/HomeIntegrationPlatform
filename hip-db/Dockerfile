@@ -9,12 +9,12 @@ ENV DB_CA_CERT=/data/ca.crt
 
 WORKDIR /home/node/app
 
-COPY package.json /home/node/app
+COPY hip-db/package.json /home/node/app
 
 RUN mkdir /data && \
 	npm install --silent --progress=false --production
 
-COPY ./ /home/node/app
+COPY hip-db/ /home/node/app
 
 VOLUME ["/data"]
 
