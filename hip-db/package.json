@@ -4,7 +4,8 @@
   "description": "Mongo DB REST API for Home Integration Platform",
   "main": "hip-db.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node hip-db.js"
   },
   "author": "",
   "license": "MIT",
