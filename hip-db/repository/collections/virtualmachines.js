@@ -10,7 +10,7 @@ const VirtualMachines = (db) => {
             const query = {_id: new ObjectID(id)};         
             virtualMachines.findOne(query, {}, (err, request) => {
                 if (err) {
-                    reject(new Error(`An error occured fetching a virtual machine with id: ${id}, err: ${err}`));
+                    reject(new Error('An error occured fetching a virtual machine with id: ' + id + ', err: ' + err));
                 }
                 resolve(request);
             });

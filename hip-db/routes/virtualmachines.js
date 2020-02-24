@@ -39,7 +39,7 @@ module.exports = (router, options) => {
         repo.getCollection("VirtualMachines").insertVirtualMachine(req.body).then(response => {
             res.status(status.OK).json(response);
         }).catch(err => {
-            const json = Object.assign({}, { message: err.message, stack: err.stack });
+            const json = Object.assign({}, { request: JSON.stringify(req.body), message: err.message, stack: err.stack });
             res.status(500).json(json);
         }).catch(next);
     });
