@@ -18,7 +18,5 @@ COPY ./ /home/node/app
 
 VOLUME ["/data"]
 
-EXPOSE PORT
-
 CMD ["npm", "start"]
 
