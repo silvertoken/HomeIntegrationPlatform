@@ -81,6 +81,17 @@ const repository = (db) => {
         });
     };
 
+    const getHealth = () => {
+        return new Promise((resolve, reject) => {
+            db.stats((err, request) => {
+                if(err) {
+                    reject(new Error('an error occured getting database stats'));
+                }
+                resolve(request);
+            });
+        });
+    };
+
     //close the database connection
     const disconnect = () => {
         db.close();
@@ -93,6 +104,7 @@ const repository = (db) => {
         postUpdateMany,
         postDeleteOne,
         postDeleteMany,
+        getHealth,
         disconnect
     });
 };

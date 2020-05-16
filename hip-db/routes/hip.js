@@ -49,4 +49,16 @@ module.exports = (router, options) => {
         }).catch(next);
     });
 
+    router.get('/health', (req, res) => {
+        repo.getHealth().then(response => {
+            if(typeof response !== 'undefined' && response.ok !== 'undefined' && response.ok == 1) {
+                res.status(status.OK).json(Object.assign({}, { status: 'running', stats: response }));
+            }
+            else {
+                res.status(status.OK).json(Object.assign({}, { status: 'down', stats: response }));
+            }
+        }).catch(err => {
+            res.status(500).json(Object.assign({}, {stats: {}, status: 'down', message: err.message }));
+        });
+    });
 };
