@@ -1,4 +1,4 @@
-FROM node:13.8.0-alpine3.11
+FROM node:14.2.0-alpine3.11
 
 ENV PORT=30000
 ENV DB=hip
