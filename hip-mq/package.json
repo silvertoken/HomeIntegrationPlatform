@@ -1,0 +1,25 @@
+{
+  "name": "hip-mq",
+  "version": "1.0.0",
+  "description": "HIP Message Queue API",
+  "main": "hip-mq.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node hip-mq.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvertoken/HomeIntegrationPlatform.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silvertoken/HomeIntegrationPlatform/issues"
+  },
+  "homepage": "https://github.com/silvertoken/HomeIntegrationPlatform#readme",
+  "dependencies": {
+    "amqplib": "^0.5.6",
+    "express": "^4.17.1",
+    "http-status": "^1.4.2"
+  }
+}
