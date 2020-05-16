@@ -7,8 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
 	"start": "node hip-db.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvertoken/HomeIntegrationPlatform.git"
+  },
   "author": "",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silvertoken/HomeIntegrationPlatform/issues"
+  },
+  "homepage": "https://github.com/silvertoken/HomeIntegrationPlatform#readme",
   "dependencies": {
     "express": "^4.17.1",
     "http-status": "^1.4.2",

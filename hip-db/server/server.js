@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const bodyparser = require('body-parser');
-const virtualMachines = require('../routes/virtualmachines');
+const hip = require('../routes/hip');
 
 const start = (options) => {
     return new Promise((resolve, reject) => {
@@ -21,13 +21,13 @@ const start = (options) => {
         });
         
         //declare our routers
-        const vmRouter = express.Router();
+        const hipRouter = express.Router();
 
         // we add our routers to the app
-        app.use("/virtualmachines", vmRouter);
+        app.use("/hip", hipRouter);
         
         //init our routes
-        virtualMachines(vmRouter, options);
+        hip(hipRouter, options);
 
         // finally we start the server, and return the newly created server 
         const server = app.listen(options.port, () => resolve(server));
