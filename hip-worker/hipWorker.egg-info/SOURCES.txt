@@ -1,0 +1,7 @@
+README.md
+setup.py
+hipWorker/__init__.py
+hipWorker.egg-info/PKG-INFO
+hipWorker.egg-info/SOURCES.txt
+hipWorker.egg-info/dependency_links.txt
+hipWorker.egg-info/top_level.txt
