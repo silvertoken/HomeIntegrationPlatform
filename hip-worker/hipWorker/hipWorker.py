@@ -8,7 +8,6 @@ class HipWorker:
     def __init__(self, rabbitServer: str, rabbitPort: int, caFile: str, clientCert: str, clientKey: str):
         self.__context = ssl.create_default_context(cafile=caFile)
         self.__context.load_cert_chain(clientCert, clientKey)
-        self.__context.check_hostname = False
         self.__ssl_options = pika.SSLOptions(self.__context, rabbitServer)
         self.__conn_params = pika.ConnectionParameters(host=rabbitServer, port=rabbitPort, ssl_options=self.__ssl_options, credentials=ExternalCredentials())
 
