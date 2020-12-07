@@ -1,0 +1,30 @@
+{
+  "name": "hip-api",
+  "version": "1.0.0",
+  "description": "HIP REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node hip-api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvertoken/HomeIntegrationPlatform.git"
+  },
+  "author": "silvertoken",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silvertoken/HomeIntegrationPlatform/issues"
+  },
+  "homepage": "https://github.com/silvertoken/HomeIntegrationPlatform#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "@hapi/hapi": "^20.0.0",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/vision": "^6.0.1",
+    "hapi-pino": "^8.3.0",
+    "hapi-swagger": "^14.0.0",
+    "joi": "^17.2.1",
+    "mongoose": "^5.10.9"
+  }
+}

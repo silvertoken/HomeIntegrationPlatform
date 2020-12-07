@@ -1,0 +1,37 @@
+<nav>
+    <section class="sidenav-content">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'overview']">Overview</a>
+      <section class="nav-group collapsible">
+        <input id="tabexample1" type="checkbox">
+        <label for="tabexample1">Infrastructure</label>
+        <ul class="nav-list">
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'infra-status']">Status</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'certificates']">Certificates</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'dns']">DNS</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'kubernetes']">Kubernetes</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'routing']">Routing</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'home-automation']">Home Automation</a></li>
+        </ul>
+      </section>
+      <section class="nav-group collapsible">
+        <input id="tabexample2" type="checkbox">
+        <label for="tabexample2">Lab</label>
+        <ul class="nav-list">
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'lab-status']">Status</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'lab-servers']">Servers</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'vcenter']">vCenter</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'vrealize']">vRealize</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'nsxt']">NSX-T</a></li>
+        </ul>
+      </section>
+      <section class="nav-group collapsible">
+        <input id="tabexample3" type="checkbox">
+        <label for="tabexample3">System</label>
+        <ul class="nav-list">
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'system-status']">Status</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'requests']">Requests</a></li>
+          <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/', 'settings']">Settings</a></li>
+        </ul>
+      </section>
+    </section>
+</nav>
