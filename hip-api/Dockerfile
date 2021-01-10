@@ -1,11 +1,4 @@
-FROM node:14.2.0-alpine3.11
-
-ENV PORT=30000
-ENV RABBIT_SERVER=hip-rabbit
-ENV RABBIT_PORT=5671
-ENV RABBIT_USER_CERT=/data/client.crt
-ENV RABBIT_USER_KEY=/data/client.pem
-ENV RABBIT_CA_CERT=/data/ca.crt
+FROM node:14.15.4-alpine3.12
 
 WORKDIR /home/node/app
 

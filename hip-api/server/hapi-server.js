@@ -34,7 +34,7 @@ exports.start = async (port) => {
             plugin: require('hapi-swagger'),
             options: {
                 info: {
-                    title: 'HIP Message API Documentation',
+                    title: 'HIP API Documentation',
                     version: '1.0.0'
                 }
             }
