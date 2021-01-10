@@ -4,7 +4,7 @@ pipeline {
         stage('Build images') {
             steps {
                 dir('hip-api') {
-                    bat "docker buildx build --platform linux/arm64 -t ${env.REGISTRY}/hip-ai:0.1.${env.BUILD_ID}"
+                    bat "docker buildx build --platform linux/arm64 -t ${env.REGISTRY}/hip-ai:0.1.${env.BUILD_ID} ."
                 }
             }
         }
