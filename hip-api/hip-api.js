@@ -24,4 +24,4 @@ mongoose.connection.on('error', err => {
     console.log(err)
 })
 
-server.start(443)
+server.start(80)
