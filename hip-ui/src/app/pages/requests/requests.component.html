@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th class="left">Id</th>
+        <th class="left">Name</th>
+        <th class="left">Status</th>
+        <th class="left">Updated At</th>
+        <th class="left">Created At</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let req of reqs">
+        <td class="left">
+          <a (click)="openModal($event, req)" href="">{{req._id}}</a>
+        </td>
+        <td class="left">{{req.name}}</td>
+        <td class="left">{{req.state}}</td>
+        <td class="left">{{req.updatedAt}}</td>
+        <td class="left">{{req.createdAt}}</td>
+        <td class="left"><button class="btn btn-danger-outline btn-sm" *ngIf="isPending(req.state)" (click)="cancelRequest($event, req._id)">Cancel</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <clr-modal [(clrModalOpen)]="showModal">
+    <h3 class="modal-title">Request: {{req?._id}}</h3>
+    <div class="modal-body">
+      <pre>{{req | json}}</pre>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="closeModal()">Ok</button>
+    </div>
+</clr-modal>
