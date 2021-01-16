@@ -3,6 +3,17 @@ const controller = require('../controllers/certificates-controller')
 const joi = require('joi')
 
 exports.init = (server) => {
+    server.route({
+        method: 'GET',
+        path: '/v1/health',
+        options: {
+            description: 'Get Health',
+            notes: 'Returns the health of the API',
+            tags: ['api'],
+        },
+        handler: controller.getHealth
+    })
+    
     //get all certificates
     server.route({
         method: 'GET',

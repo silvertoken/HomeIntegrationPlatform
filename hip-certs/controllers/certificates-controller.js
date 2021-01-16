@@ -1,6 +1,10 @@
 'use strict'
 const service = require('../services/certificates-service')
 
+exports.getHealth = (request, handler) => {
+    return service.getHealth()
+}
+
 exports.getCertificates = (request, handler) => {
     return service.getCertificates();
 }

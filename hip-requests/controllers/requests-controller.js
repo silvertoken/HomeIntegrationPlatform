@@ -1,6 +1,10 @@
 'use strict'
 const service = require('../services/requests-service')
 
+exports.getHealth = (request, handler) => {
+    return service.getHealth()
+}
+
 exports.getRequests = async (request, handler) => {
     return await service.getRequests();
 }

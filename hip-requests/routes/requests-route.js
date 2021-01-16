@@ -3,6 +3,16 @@ const controller = require('../controllers/requests-controller')
 const joi = require('joi')
 
 exports.init = (server) => {
+    server.route({
+        method: 'GET',
+        path: '/v1/health',
+        options: {
+            description: 'Get Health',
+            notes: 'Returns the health of the API',
+            tags: ['api'],
+        },
+        handler: controller.getHealth
+    })
     //get all requests
     server.route({
         method: 'GET',

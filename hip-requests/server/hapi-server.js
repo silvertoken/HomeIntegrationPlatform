@@ -1,7 +1,9 @@
 'use strict'
 
 const hapi = require('@hapi/hapi');
+const health = require('../routes/health-route')
 const certificates = require('../routes/certificates-route')
+const requests = require('../routes/requests-route')
 
 exports.start = async (port) => {
     const server = hapi.server({
@@ -32,7 +34,7 @@ exports.start = async (port) => {
             plugin: require('hapi-swagger'),
             options: {
                 info: {
-                    title: 'HIP Certificate API Documentation',
+                    title: 'HIP Requests API Documentation',
                     version: process.env.npm_package_version
                 }
             }
@@ -41,11 +43,13 @@ exports.start = async (port) => {
     ])
 
     //init routes
+    health.init(server)
     certificates.init(server)
+    requests.init(server)
 
     //start server
     await server.start()
-    server.logger.info('hip-certs is listening on port ' + port)
+    server.logger.info('hip-requests is listening on port ' + port)
 
     return server
 }
