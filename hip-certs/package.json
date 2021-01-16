@@ -1,11 +1,11 @@
 {
-  "name": "hip-api",
+  "name": "hip-certs",
   "version": "1.0.0",
-  "description": "HIP REST API",
+  "description": "HIP Certificate REST API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node hip-api.js"
+    "start": "node hip-certs.js"
   },
   "repository": {
     "type": "git",
