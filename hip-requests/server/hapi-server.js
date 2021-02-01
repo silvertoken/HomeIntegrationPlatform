@@ -1,8 +1,6 @@
 'use strict'
 
 const hapi = require('@hapi/hapi');
-const health = require('../routes/health-route')
-const certificates = require('../routes/certificates-route')
 const requests = require('../routes/requests-route')
 
 exports.start = async (port) => {
@@ -43,8 +41,6 @@ exports.start = async (port) => {
     ])
 
     //init routes
-    health.init(server)
-    certificates.init(server)
     requests.init(server)
 
     //start server
